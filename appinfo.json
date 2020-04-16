@@ -1,0 +1,10 @@
+{
+		"name": "MYSQL DATABASE",
+		"short_name": "MYSQL-DB",
+		"version": "V.5.7",
+		"description": "Long description of the Application shown in Store, can be multiline",
+        "short_description": "Short description of the Application shown in Store",
+		"catalogue_url": "",
+		"application_url": "https://www.mysql.com",
+		"tags": ["db", "mysql", "database", "mysql"]
+}
