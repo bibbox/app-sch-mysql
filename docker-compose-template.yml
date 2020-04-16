@@ -22,14 +22,13 @@ services:
     depends_on:
       - §§INSTANCE-app-data
 
-
-#  §§INSTANCE-adminer:
-   image: adminer
-   container_name: §§INSTANCE-app-adminer
-   restart: unless-stopped
-   networks:
+  §§INSTANCE-adminer:
+    image: adminer
+    container_name: §§INSTANCE-app-adminer
+    restart: unless-stopped
+    networks:
       - bibbox-default-network
-   links:
+    links:
       - §§INSTANCE-app-db:app-db
     ports:
       - "§§PORT1:80"
