@@ -24,24 +24,24 @@ services:
 
 
 #  §§INSTANCE-adminer:
-#   image: adminer
-  #  container_name:  §§INSTANCE-adminer
-  # restart: unless-stopped
-  #  networks:
-  #    - bibbox-default-network
-  #  links:
-  #    - §§INSTANCE-app-db:app-db
-  #  ports:
-  #    - "§§PORT1:80"
-  #  depends_on:
-  #    - §§INSTANCE-app-db
-  #    - §§INSTANCE-app-data
-  #  volumes_from: 
-  #    - §§INSTANCE-app-data
+   image: adminer
+   container_name:  §§INSTANCE-app-adminer
+   restart: unless-stopped
+   networks:
+      - bibbox-default-network
+   links:
+      - §§INSTANCE-app-db:app-db
+    ports:
+      - "§§PORT1:80"
+    depends_on:
+      - §§INSTANCE-app-db
+      - §§INSTANCE-app-data
+    volumes_from: 
+      - §§INSTANCE-app-data
 
   §§INSTANCE-app-data:
     image: busybox
     container_name: §§INSTANCE-app-data
     volumes:
-      - ./data/app-data:/var/app-data
-      - ./data/app-config:/var/app-config
+      - ./data/app-data:/var/lib/mysql
+
