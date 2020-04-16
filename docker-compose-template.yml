@@ -31,7 +31,7 @@ services:
     links:
       - §§INSTANCE-app-db:app-db
     ports:
-      - "§§PORT1:80"
+      - "§§PORT1:8080"
     depends_on:
       - §§INSTANCE-app-db
       - §§INSTANCE-app-data
