@@ -21,8 +21,6 @@ services:
       - §§INSTANCE-app-data
     depends_on:
       - §§INSTANCE-app-data
-    ports:
-      - $$§§PORT1:80"
 
 
 #  §§INSTANCE-adminer:
